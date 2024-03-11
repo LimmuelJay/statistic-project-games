@@ -1,0 +1,368 @@
+body {
+    background: #323643;
+    color: #93DEFF;
+    font-family: 'Press Start 2P', cursive;
+    display: grid;
+    height: 100vh;
+    margin: 0;
+}
+
+
+/* Logo */
+.logo-container{
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    margin: 1rem;
+}
+@keyframes scale-up-center {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+.logo-container img{
+    animation: scale-up-center 1s;
+}
+
+
+/* Title */
+
+.title-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem auto;
+}
+.title-container h1{
+    margin: auto;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    animation: vibrate-1 0.3s linear infinite both;
+}
+
+@keyframes vibrate-1 {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  
+
+/* Main Container */
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+/* Players */
+
+.players{
+    margin: auto;
+}
+
+.vs{
+    margin: auto;
+    font-size: 1rem;
+}
+
+.players h2{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.diceImage{
+    width: 3rem;
+}
+
+/* Scores */
+
+.scores{
+    order: 4;
+    margin: auto;
+}
+.scores h2{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Buttons */
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    gap: 3rem;
+}
+
+.btn-container a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.roll-btn, .start-btn{
+    box-shadow: 0 .625rem .875rem -4375rem #323643;
+	background-color:#606470;
+	border-radius: .625rem;
+	display:inline-block;
+	cursor:pointer;
+	color: inherit;
+	font-family: inherit;
+	font-size:1.1rem;
+	font-weight:bold;
+	padding: .5rem 1rem;
+	text-decoration:none;
+}
+.roll-btn:hover, .start-btn:hover {
+	background-color:#606470;
+}
+.roll-btn:active, .start-btn:active {
+	position:relative;
+	top:1px;
+}
+
+.reset-btn{
+    box-shadow: 0 .625rem .875rem -.4375rem #323643;
+	background-color:#606470;
+	border-radius: .625rem;
+	display:inline-block;
+	cursor:pointer;
+	color: inherit;
+	font-family: inherit;
+	font-size:.7rem;
+	padding: .5rem 1rem;
+	text-decoration:none;
+}
+
+.reset-btn:hover{
+    background-color:#606470;
+}
+
+.reset-btn:active{
+    position:relative;
+	top:1px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: auto;
+    font-size: .3rem;
+    letter-spacing: .2rem;
+}
+
+
+/* Small Screen Fix */
+
+@media only screen and (min-width: 386px){
+
+    .title-container h1{
+        font-size: 1.8rem;
+    }
+
+    .players h2, .scores h2{
+        font-size: 1.2rem;
+    }
+
+    .scores p, .vs{
+        font-size: 1rem;
+    }
+
+    .diceImage{
+        width: 4rem;
+    }
+
+}
+
+@media only screen and (min-width: 460px){
+
+    .title-container h1{
+        font-size: 1.8rem;
+    }
+
+    .players h2, .scores h2{
+        font-size: 1.3rem;
+    }
+
+    .scores p, .vs{
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 493px){
+
+    .title-container h1{
+        font-size: 2rem;
+    }
+
+    .players h2, .scores h2{
+        font-size: 1.5rem;
+    }
+
+    .scores p, .vs{
+        font-size: 1.2rem;
+    }
+
+}
+
+@media only screen and (min-width: 567px){
+
+    .title-container h1{
+        font-size: 2.2rem;
+    }
+
+    .players h2, .scores h2{
+        font-size: 1.6rem;
+    }
+
+    .scores p, .vs{
+        font-size: 1.5rem;
+    }
+
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 576px) {
+
+    .logo-container img{
+        width: 8rem;
+    }
+
+    .main-container{
+        flex-wrap: nowrap;
+    }
+
+    .scores{
+        order: 0;
+    }
+
+    .title-container h1{
+        font-size: 2rem;
+    }
+
+    .players h2{
+        font-size: 1.2rem;
+    }
+
+    .scores h2{
+        font-size: 1rem;
+    }
+
+    .scores p, .vs{
+        font-size: 1rem;
+    }
+
+    .diceImage{
+        width: 4rem;
+    }
+
+    .roll-btn, .start-btn, .reset-btn{
+        padding: .8rem 1.5rem;
+    }
+
+    footer{
+        font-size: .5rem;
+        letter-spacing: .3rem;
+    }
+
+    
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .main-container{
+        flex-wrap: nowrap;
+    }
+
+    .scores{
+        order: 0;
+    }
+
+    .title-container h1{
+        font-size: 3rem;
+    }
+
+    .players h2{
+        font-size: 1.5rem;
+    }
+
+    .scores h2{
+        font-size: 1.2rem;
+    }
+
+    .scores p, .vs{
+        font-size: 1.2rem;
+    }
+
+    .diceImage{
+        width: 5rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .main-container{
+        flex-wrap: nowrap;
+        margin: auto 1rem;
+    }
+
+    .scores{
+        order: 0;
+    }
+
+    .title-container h1{
+        font-size: 4rem;
+    }
+
+    .players h2{
+        font-size: 2.2rem;
+    }
+
+    .scores h2{
+        font-size: 2rem;
+    }
+
+    .scores p, .vs{
+        font-size: 1.8rem;
+    }
+
+    .diceImage{
+        width: 12rem;
+    }
+}
